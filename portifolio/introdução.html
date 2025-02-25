@@ -1,24 +1,60 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
     <style>
+        /* Estilização geral da página */
         body { 
             font-family: Arial, sans-serif; 
             margin: 0; 
             padding: 0; 
             text-align: center; 
         }
+        
+        /* Estilização do cabeçalho */
         header { 
             background: #333; 
             color: white; 
-            padding: 20px; 
+            padding: 70px; 
+            position: relative;
         }
+        
+        /* Estilização do menu de navegação */
+        nav {
+            background: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Estilização do avatar (foto de perfil) */
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 3px solid white;
+        }
+        
+        /* Estilização das seções */
         section { 
             padding: 50px 20px; 
         }
+        
+        /* Estilização dos projetos */
         .projetos { 
             display: flex; 
             justify-content: center; 
@@ -29,13 +65,22 @@
             border: 1px solid #ddd; 
             padding: 20px; 
             width: 300px; 
+            transition: border-color 0.3s ease-in-out;
+            border-radius: 100px;
         }
+        .projeto:hover {
+            border-color: #0026fc; /* Altera a cor da borda ao passar o mouse */
+        }
+        
+        /* Estilização do rodapé */
         footer { 
             background: #333; 
             color: white; 
             padding: 10px; 
             margin-top: 20px; 
         }
+        
+        /* Estilização dos links */
         a { 
             color: #007bff; 
             text-decoration: none; 
@@ -44,11 +89,19 @@
 </head>
 <body>
     <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQZcDeW2iydZ5khTBiJSeOLbHdmoZ9tuDMRQ&s" alt="perfil" class="avatar"> <!-- Foto de perfil -->
+        <p><>
         <h1>Suellen Da Silva Cardoso</h1>
         <p>Desenvolvedor Web </p>
     </header>
     
-    <section>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    
+    <section id="sobre"> <!-- Seção sobre mim -->
         <h2>Sobre Mim</h2>
         <p>Oi! Sou um desenvolvedor back-end que adora transformar lógica em soluções reais. Trabalho com Python e MongoDB para criar sistemas rápidos, seguros e bem estruturados. 
         Tenho experiência com bancos de dados relacionais e não relacionais e otimização e desempenho.</p>
@@ -57,30 +110,34 @@
         Se precisar de um dev que resolve problemas sem complicação, me chama!</p>
     </section>
     
-    
-    <section>
+    <section id="projetos"> <!-- Seção de projetos -->
         <h2>Projetos</h2>
         <div class="projetos">
-            <div class="projeto">
+            <div class="projeto"> <!-- Primeiro projeto -->
                 <h3>cadastro de ficha de persona para RPG</h3>
                 <p>Monte sua ficha de RPG sem dor de cabeça! Atributos, habilidades e inventário organizados para você focar no que realmente importa: a aventura!</p>
                 <a href="https://github.com/Suellen-L/Cadastro.git">Ver mais</a>
             </div>
-            <div class="projeto">
-                <h3>Projeto 2</h3>
+            <div class="projeto"> <!-- Segundo projeto -->
+                <h3>wireframe de uma loja de joias</h3>
+                <p>Wireframe mobile para uma loja de joias, projetado para oferecer uma experiência sofisticada e intuitiva. Design elegante, interface limpa e navegação fluida, com exibição detalhada dos produtos, filtros eficientes para uma jornada de compra simples e agradável.</p>
+                <a href="https://www.figma.com/design/2nSgImi2GrEcoS0TAJfUjq/Untitled?node-id=0-1&p=f&t=rB1JrgQCogaY2TW1-0">Ver mais</a>
+            </div>
+            <div class="projeto"> <!-- Terceiro projeto -->
+                <h3>projeto</h3>
                 <p>Descrição breve do projeto.</p>
                 <a href="#">Ver mais</a>
             </div>
         </div>
     </section>
     
-    <section>
+    <section id="contato"> <!-- Seção de contato -->
         <h2>Contato</h2>
-        <p>Email: <a href="meuemail:suellendasilva6746@email.com">suellendasilva6746@email.com</a></p>
+        <p>Email: <a href="meuemail:suellendasilva6746@email.com">Suellen-L</a></p>
         <p>GitHub: <a href="https://github.com/Suellen-L" target="_blank">Suellen-L</a></p>
     </section>
     
-    <footer>
+    <footer> <!-- Rodapé -->
         <p>&copy; 2025</p>
     </footer>
 </body>
