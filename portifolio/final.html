@@ -6,6 +6,7 @@
     <title>Meu Portfólio</title>
     <style>
         /* Estilização geral da página */
+
         body { 
             font-family: Arial, sans-serif; 
             margin: 0; 
@@ -14,15 +15,21 @@
             color: white;
             text-align: center; 
         }
+        section p {
+        text-align: justify;
+        max-width: 800px; 
+        margin: 0 auto; 
+        }
+
+        /* Cabeçalho com fundo escuro e espaçamento */
         
-        /* Estilização do cabeçalho */
         header { 
             background: #1a1a1a; 
             padding: 50px 20px; 
             position: relative;
         }
+        /* Navegação centralizada com espaçamento entre links */
         
-        /* Estilização do menu de navegação */
         nav {
             background: #222;
             padding: 15px;
@@ -30,17 +37,21 @@
             justify-content: center;
             gap: 20px;
         }
+        /* Estilização dos links de navegação */
+
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
+        /* Mudança de cor ao passar o mouse nos links */
+        
         nav a:hover {
             color: #a855f7;
         }
+        /* Estilização do avatar de perfil */
         
-        /* Estilização do avatar */
         .avatar {
             width: 120px;
             height: 120px;
@@ -50,19 +61,21 @@
             background: linear-gradient(45deg, #a855f7, #6b21a8);
             padding: 5px;
         }
+        /* Seções com espaçamento */
         
-        /* Estilização das seções */
         section { 
             padding: 50px 20px; 
         }
+        /* Container flexível para os projetos */
         
-        /* Estilização dos projetos */
         .projetos { 
             display: flex; 
             justify-content: center; 
             gap: 20px; 
             flex-wrap: wrap; 
         }
+        /* Cartões dos projetos */
+
         .projeto { 
             background: #1e1e1e;
             border: 2px solid transparent;
@@ -71,71 +84,154 @@
             border-radius: 20px;
             transition: border-color 0.3s ease-in-out, transform 0.3s;
         }
+        /* Efeito ao passar o mouse nos projetos */
+
         .projeto:hover {
             border-color: #a855f7;
             transform: scale(1.05);
         }
+        /* Rodapé com fundo escuro */
         
-        /* Estilização do rodapé */
         footer { 
             background: #1a1a1a; 
             color: white; 
             padding: 15px; 
             margin-top: 20px; 
         }
-        
         /* Estilização dos links */
+        
         a { 
             color: #a855f7; 
             text-decoration: none; 
+        }
+        /* Formulário de contato */
+
+        #contato form {
+            max-width: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #1e1e1e;
+            padding: 10px;
+            border-radius: 10px;
+            align-items: center; 
+            text-align: center;
+        }
+        /* Container para os inputs do formulário */
+        
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        /* Rótulos dos inputs */
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        /* Estilização dos campos de entrada */
+
+        textarea, input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+        }
+        /* Botão de envio do formulário */
+
+        button {
+            background: #a855f7;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            
+        }
+
+        /* Efeito ao passar o mouse no botão */
+
+        button:hover {
+            background: #6b21a8;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://w7.pngwing.com/pngs/605/819/png-transparent-avatar-face-male-man-people-profile-user-avatar-user-icon.png" alt="perfil" class="avatar"> <!-- Foto de perfil -->
+                <!-- Avatar de perfil -->
+        <img src="https://w7.pngwing.com/pngs/605/819/png-transparent-avatar-face-male-man-people-profile-user-avatar-user-icon.png" alt="perfil" class="avatar"> 
         <h1>Suellen Da Silva Cardoso</h1>
-        <p>Desenvolvedor Web</p>
+        <p>Desenvolvedor full stack</p>
     </header>
     
     <nav>
-        <a href="#sobre">Sobre</a>
+            <!-- Menu de navegação -->
+        <a href="#sobre">Sobre mim</a>
         <a href="#projetos">Projetos</a>
         <a href="#contato">Contato</a>
     </nav>
     
-    <section id="sobre"> <!-- Seção sobre mim -->
+    <section id="sobre"> 
+            <!-- Seção Sobre Mim -->
         <h2>Sobre Mim</h2>
         <p>Oi! Sou um desenvolvedor web com experiência em back-end e front-end, apaixonado por criar soluções eficientes e bem estruturadas. Meu foco principal é no desenvolvimento back-end, utilizando Python e MongoDB para construir sistemas robustos, seguros e escaláveis.</p>
-
         <p>Tenho experiência em bancos de dados relacionais e não relacionais. Gosto de desafios e busco sempre a melhor abordagem para garantir que tudo funcione de forma fluida e eficiente no back-end<p>
-
         <p>Se você procura um desenvolvedor comprometido e focado em soluções eficientes, estou à disposição para contribuir em novos desafios!</p>
     </section>
     
-    <section id="projetos"> <!-- Seção de projetos -->
+    <section id="projetos">
+            <!-- Seção Projetos -->
         <h2>Projetos</h2>
         <div class="projetos">
-            <div class="projeto"> <!-- Primeiro projeto -->
+            <div class="projeto">
+                            <!-- Projeto 1 -->
                 <h3>Cadastro de ficha de persona para RPG</h3>
                 <p>Monte sua ficha de RPG sem dor de cabeça! Atributos, habilidades e inventário organizados para você focar no que realmente importa: a aventura!</p>
                 <a href="https://github.com/Suellen-L/Cadastro.git">Ver mais</a>
             </div>
-            <div class="projeto"> <!-- Segundo projeto -->
+            <div class="projeto">
+                            <!-- Projeto 2 -->
                 <h3>Wireframe de uma loja de joias</h3>
                 <p>Wireframe mobile para uma loja de joias, projetado para oferecer uma experiência sofisticada e intuitiva.</p>
                 <a href="https://www.figma.com/design/2nSgImi2GrEcoS0TAJfUjq/Untitled?node-id=0-1&p=f&t=rB1JrgQCogaY2TW1-0">Ver mais</a>
             </div>
         </div>
     </section>
-    
-    <section id="contato"> <!-- Seção de contato -->
+    <!-- Formulário de Contato -->
+   
+    <section id="contato">
         <h2>Contato</h2>
-        <p>Email: <a href="https://mail.google.com/mail/?view=cm&to=luan.cardoso0903@gmail.com" target="_blank">Suellen-L</a>, direcionamento para o Gmail.</p>
-        <p>GitHub: <a href="https://github.com/Suellen-L" target="_blank">Suellen-L</a></p>
+        <form action="mailto:luan.cardoso0903@gmail.com" method="post" enctype="text/plain">
+            <div class="input-container">
+                <label for="comentario">Comentário*</label>
+                <textarea id="comentario" name="comentario" rows="5" required></textarea>
+            </div>
+            <div class="input-container">
+                <label for="nome">Nome*</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="input-container">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        
+            <a href="https://github.com/Suellen-L" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+            </a>
+            
     </section>
+    <!-- Rodapé -->
     
-    <footer> <!-- Rodapé -->
+    <footer>
         <p>&copy; 2025</p>
     </footer>
 </body>
